@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="title" content="Optical Music Recognition for Handwritten Kateishiki-fu Scores">
+  <meta name="description" content="A two-stage optical music recognition pipeline for handwritten Shamisen Kateishiki-fu, combining symbol detection with melody completion guided by musical context.">
+  <meta name="keywords" content="Kateishiki-fu, optical music recognition, OMR, Shamisen, Japanese traditional music, music language model">
+  <meta name="author" content="Emika Kurita, Wataru Ikeda, Shuhei Yamada, Haruyoshi Suzuki, Maki Sugimoto, Mariko Isogawa">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="English">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Keio University">
+  <meta property="og:title" content="Optical Music Recognition for Handwritten Kateishiki-fu Scores">
+  <meta property="og:description" content="Recognizing handwritten Shamisen notation by combining symbol detection and melody completion.">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Optical Music Recognition for Handwritten Kateishiki-fu Scores">
+  <meta name="twitter:description" content="A two-stage OMR pipeline for handwritten Shamisen notation.">
+  <meta name="citation_title" content="Optical Music Recognition for Handwritten Kateishiki-fu Scores using Symbol Detection and Melody Completion">
+  <meta name="citation_author" content="Kurita, Emika">
+  <meta name="citation_author" content="Ikeda, Wataru">
+  <meta name="citation_author" content="Yamada, Shuhei">
+  <meta name="citation_author" content="Suzuki, Haruyoshi">
+  <meta name="citation_author" content="Sugimoto, Maki">
+  <meta name="citation_author" content="Isogawa, Mariko">
+  <meta name="citation_publication_date" content="2026">
+  <meta name="citation_conference_title" content="Asian Conference on Computer Vision (ACCV)">
+  <meta name="theme-color" content="#C9171E">
+  <title>Optical Music Recognition for Handwritten Kateishiki-fu Scores | Academic Research</title>
+  <link rel="icon" type="image/svg+xml" href="static/images/favicon.svg">
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+  <link rel="preload" href="static/css/fontawesome.all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="static/css/fontawesome.all.min.css"></noscript>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script defer src="static/js/bulma-carousel.min.js"></script>
+  <script defer src="static/js/bulma-slider.min.js"></script>
+  <script defer src="static/js/index.js"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    "headline": "Optical Music Recognition for Handwritten Kateishiki-fu Scores using Symbol Detection and Melody Completion",
+    "description": "A two-stage optical music recognition pipeline for handwritten Shamisen Kateishiki-fu, combining symbol detection with melody completion guided by musical context.",
+    "author": [
+      {"@type":"Person","name":"Emika Kurita","affiliation":{"@type":"Organization","name":"Keio University"}},
+      {"@type":"Person","name":"Wataru Ikeda","affiliation":{"@type":"Organization","name":"Keio University"}},
+      {"@type":"Person","name":"Shuhei Yamada","affiliation":{"@type":"Organization","name":"Keio University"}},
+      {"@type":"Person","name":"Haruyoshi Suzuki","affiliation":{"@type":"Organization","name":"Keio University"}},
+      {"@type":"Person","name":"Maki Sugimoto","affiliation":{"@type":"Organization","name":"Keio University"}},
+      {"@type":"Person","name":"Mariko Isogawa","affiliation":{"@type":"Organization","name":"Keio University"}}
+    ],
+    "datePublished": "2026",
+    "publisher": {"@type":"Organization","name":"Asian Conference on Computer Vision (ACCV)"},
+    "abstract": "We construct a dataset of 88 handwritten Kateishiki-fu score images with 15,788 annotated symbols and propose a pipeline that refines low-confidence symbol detections using melodic context.",
+    "isAccessibleForFree": true
+  }
+  </script>
+</head>
+<body>
+  <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <main id="main-content">
+    <section class="hero publication-header">
+      <div class="hero-body">
+        <div class="container is-max-desktop">
+          <div class="columns is-centered">
+            <div class="column has-text-centered">
+              <h1 class="title is-1 publication-title">Optical Music Recognition for Handwritten Kateishiki-fu Scores using Symbol Detection and Melody Completion</h1>
+              <div class="is-size-5 publication-authors">
+                <span class="author-block">Emika Kurita,</span>
+                <span class="author-block"><a href="https://wataru823.github.io/" target="_blank" rel="noopener">Wataru Ikeda</a>,</span>
+                <span class="author-block">Shuhei Yamada,</span>
+                <span class="author-block">Haruyoshi Suzuki,</span>
+                <br>
+                <span class="author-block"><a href="https://im-lab.net/" target="_blank" rel="noopener">Maki Sugimoto</a>,</span>
+                <span class="author-block"><a href="https://isogawa.ics.keio.ac.jp/" target="_blank" rel="noopener">Mariko Isogawa</a></span>
+              </div>
+              <div class="is-size-5 publication-authors">
+                <span class="author-block">Keio University, Japan<br>Asian Conference on Computer Vision (ACCV) 2026</span>
+              </div>
+              <div class="column has-text-centered">
+                <div class="publication-links">
+                  <span class="link-block"><span class="external-link button is-normal is-rounded is-dark is-static coming-soon-button"><span class="icon"><i class="fas fa-file-pdf"></i></span><span>Paper · Coming Soon</span></span></span>
+                  <span class="link-block"><span class="external-link button is-normal is-rounded is-dark is-static coming-soon-button"><span class="icon"><i class="fas fa-file-alt"></i></span><span>arXiv · Coming Soon</span></span></span>
+                  <span class="link-block"><a href="https://github.com/isogawalab/KateishikiFu-OMR/" target="_blank" rel="noopener" class="external-link button is-normal is-rounded is-dark"><span class="icon"><i class="fab fa-github"></i></span><span>Code</span></a></span>
+                  <span class="link-block"><span class="external-link button is-normal is-rounded is-dark is-static coming-soon-button"><span class="icon"><i class="fas fa-cube"></i></span><span>Checkpoint · Coming Soon</span></span></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="hero teaser">
+      <div class="container is-max-desktop">
+        <div class="hero-body">
+          <figure>
+            <img class="publication-banner" src="static/images/omr-pipeline.png" alt="Overview of the Kateishiki-fu OMR framework, from symbol detection and sequence construction to melody completion and hypothesis selection." fetchpriority="high">
+            <figcaption class="subtitle has-text-centered">The proposed pipeline combines component-level symbol detection with melody completion and hypothesis selection.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section hero is-light" id="abstract">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Abstract</h2>
+            <div class="content has-text-justified">
+              <p><em>Kateishiki-fu</em> is a non-staff notation system used for Japanese traditional instruments. Optical music recognition (OMR) for handwritten Kateishiki-fu remains largely unexplored because annotated data are limited and the notation has culture-specific structure. We construct a dataset of 88 handwritten score images with 15,788 manually annotated music symbols. We then propose a two-stage OMR pipeline that first detects symbol candidates using a low-confidence threshold and then refines uncertain predictions with a music language model. In addition to the original evaluation, we report three-fold cross-validation and a preliminary piece-level split, and compare MusicBERT before and after fine-tuning.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section publication-body" id="method">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">Method</h2>
+        <div class="content has-text-justified">
+          <p>The detector retains low-confidence candidates to prioritize recall. The sequence constructor groups components into notes and orders them from top to bottom, then right to left. MusicBERT estimates uncertain pitches from their melodic context. Finally, a hypothesis selector compares keeping each note with deleting it, removing false positives that do not fit the sequence.</p>
+        </div>
+        <div class="columns is-multiline is-centered method-steps">
+          <div class="column is-3-desktop is-6-tablet"><div class="box"><span class="step-label">01</span><h3 class="title is-5">Symbol detection</h3><p>Find component symbols at a low threshold to preserve faint or ambiguous candidates.</p></div></div>
+          <div class="column is-3-desktop is-6-tablet"><div class="box"><span class="step-label">02</span><h3 class="title is-5">Sequence construction</h3><p>Group detections into notes and arrange them in Kateishiki-fu reading order.</p></div></div>
+          <div class="column is-3-desktop is-6-tablet"><div class="box"><span class="step-label">03</span><h3 class="title is-5">Melody completion</h3><p>Use MusicBERT to infer uncertain pitches from surrounding notes.</p></div></div>
+          <div class="column is-3-desktop is-6-tablet"><div class="box"><span class="step-label">04</span><h3 class="title is-5">Hypothesis selection</h3><p>Choose whether to keep or delete a low-confidence note based on melody likelihood.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section hero is-light" id="dataset">
+      <div class="hero-body">
+        <div class="container is-max-desktop">
+          <h2 class="title is-3 has-text-centered">Kateishiki-fu Scores Dataset</h2>
+          <div class="columns is-vcentered">
+            <div class="column is-6">
+              <div class="content has-text-justified">
+                <p>The dataset contains 22 musical pieces and 88 handwritten score pages. Its component-level annotation scheme represents the notation with 33 classes, reducing a long-tailed set of more than 72 possible note combinations.</p>
+                <p>Each symbol is annotated with a bounding box and class label. Lyrics, titles, tuning information, and other text unrelated to musical performance are excluded.</p>
+              </div>
+            </div>
+            <div class="column is-6">
+              <figure class="dataset-figure">
+                <img src="static/images/kateishiki-symbols.png" alt="Shamisen Kateishiki-fu pitch characters, rests, pitch modifiers, and performance symbols." loading="lazy">
+                <figcaption class="has-text-centered">Pitch, rest, modifier, and performance symbols in Shamisen Kateishiki-fu.</figcaption>
+              </figure>
+            </div>
+          </div>
+          <div class="columns is-vcentered dataset-details">
+            <div class="column is-6">
+              <figure class="dataset-figure component-figure">
+                <img src="static/images/dataset-components.png" alt="Example of a handwritten pitch character decomposed into reusable symbol components." loading="lazy">
+                <figcaption class="has-text-centered">A pitch character is represented as reusable component symbols.</figcaption>
+              </figure>
+            </div>
+            <div class="column is-6">
+              <div class="dataset-facts-panel">
+                <h3 class="title is-5">Dataset at a glance</h3>
+                <div class="dataset-primary-stat">
+                  <div class="annotation-count"><strong>15,788</strong><span>annotated music symbols</span></div>
+                  <div class="annotation-key" aria-label="Each annotation has a class label and a bounding box">
+                    <svg class="annotation-motif" viewBox="0 0 44 44" aria-hidden="true">
+                      <rect x="5" y="4" width="34" height="36" rx="3" fill="#FAE8E8" stroke="#C9171E" stroke-width="1.8"/>
+                      <path d="M17 29V15l12-3v14" fill="none" stroke="#C9171E" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/>
+                      <ellipse cx="14" cy="30" rx="4" ry="2.7" transform="rotate(-25 14 30)" fill="#C9171E"/>
+                      <ellipse cx="26" cy="27" rx="4" ry="2.7" transform="rotate(-25 26 27)" fill="#C9171E"/>
+                    </svg>
+                    <span>class +<br>bounding box</span>
+                  </div>
+                </div>
+                <div class="dataset-secondary-stats">
+                  <div class="dataset-stat"><strong>22</strong><span>musical pieces</span></div>
+                  <span class="dataset-arrow" aria-hidden="true">→</span>
+                  <div class="dataset-stat"><strong>88</strong><span>score pages</span></div>
+                  <div class="dataset-stat dataset-class-stat"><strong>33</strong><span>component classes</span></div>
+                </div>
+                <p class="dataset-facts-note">Breaking notes into reusable parts helps represent rare combinations with a compact set of labels.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="results">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">Results</h2>
+        <div class="content has-text-justified">
+          <p>Across three folds, the proposed method reaches the highest mean precision and F1 among the compared methods, with a <strong class="results-inline-metric">mean F1 of 80.44 ± 3.55%</strong>. RT-DETR has higher recall and lower SER, while the proposed method has higher precision and F1. Against the YOLOv11 detector at the same low confidence threshold, adding completion and selection improves precision, F1, and SER. A preliminary piece-level split produces comparable F1, and fine-tuning MusicBERT substantially improves F1 over its pretrained-only setting.</p>
+        </div>
+        <div class="table-container">
+          <table class="table is-fullwidth results-table">
+            <caption>Table A. Three-fold cross-validation, mean ± standard deviation (%)</caption>
+            <thead><tr><th>Method</th><th>Precision ↑</th><th>Recall ↑</th><th>F1 ↑</th><th>SER ↓</th></tr></thead>
+            <tbody>
+              <tr><th>YOLOv11 (θ = 0.1)</th><td>77.13 ± 5.44</td><td>84.59 ± 1.34</td><td>80.29 ± 3.71</td><td>33.37 ± 12.08</td></tr>
+              <tr><th>GPT-5.6 Sol (high)</th><td>54.44 ± 3.58</td><td>52.43 ± 4.81</td><td>53.41 ± 4.22</td><td>63.32 ± 3.60</td></tr>
+              <tr><th>Gemini 3.1 Pro (high)</th><td>48.09 ± 1.17</td><td>46.87 ± 3.41</td><td>47.39 ± 1.69</td><td>71.22 ± 3.43</td></tr>
+              <tr><th>Jeongganbo OMR</th><td>28.26 ± 12.95</td><td>31.70 ± 14.77</td><td>29.84 ± 13.71</td><td>148.15 ± 27.06</td></tr>
+              <tr><th>RT-DETR (alone)</th><td>66.59 ± 1.61</td><td><strong>95.43 ± 0.29</strong></td><td>78.43 ± 1.21</td><td><strong>25.62 ± 0.62</strong></td></tr>
+              <tr class="is-selected"><th>Ours (YOLOv11 + completion)</th><td><strong>77.89 ± 5.30</strong></td><td>83.98 ± 1.20</td><td><strong>80.44 ± 3.55</strong></td><td>32.71 ± 11.21</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="is-size-7 has-text-grey">The prompted VLM baselines use character crops with ground-truth labels as few-shot examples. SER: Symbol Error Rate.</p>
+
+        <div class="table-container results-subtable">
+          <table class="table is-fullwidth results-table">
+            <caption>Table B. Split strategy comparison, mean ± standard deviation (%)</caption>
+            <thead><tr><th>Split</th><th>Precision ↑</th><th>Recall ↑</th><th>F1 ↑</th><th>SER ↓</th></tr></thead>
+            <tbody>
+              <tr><th>Page-level</th><td>77.89 ± 5.30</td><td>83.98 ± 1.20</td><td>80.44 ± 3.55</td><td>32.71 ± 11.21</td></tr>
+              <tr><th>Piece-level</th><td>78.30 ± 2.55</td><td>84.58 ± 1.02</td><td>80.39 ± 1.40</td><td>29.02 ± 1.06</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="is-size-7 has-text-grey">The preliminary piece-level evaluation is comparable to the page-level result and reduces the risk of melodic patterns leaking across pages from the same piece.</p>
+
+        <div class="table-container results-subtable">
+          <table class="table is-fullwidth results-table">
+            <caption>Table C. MusicBERT pretrained-only vs. fine-tuned (%)</caption>
+            <thead><tr><th>Setting</th><th>Precision ↑</th><th>Recall ↑</th><th>F1 ↑</th><th>SER ↓</th></tr></thead>
+            <tbody>
+              <tr><th>Pretrained-only</th><td>80.64</td><td>84.24</td><td>81.94</td><td>30.04</td></tr>
+              <tr class="is-selected"><th>Fine-tuned (ours)</th><td><strong>90.35</strong></td><td><strong>89.77</strong></td><td><strong>89.15</strong></td><td>30.69</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="is-size-7 has-text-grey">Fine-tuning improves F1 by 7.21 percentage points, while SER changes from 30.04% to 30.69% in this ablation.</p>
+      </div>
+    </section>
+
+    <section class="section hero is-light" id="BibTeX">
+      <div class="hero-body">
+        <div class="container is-max-desktop content">
+          <div class="bibtex-header">
+            <h2 class="title is-3">BibTeX</h2>
+            <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard" type="button">
+              <i class="fas fa-copy"></i><span class="copy-text">Copy</span>
+            </button>
+          </div>
+          <pre id="bibtex-code"><code>@inproceedings{kurita2026kateishikifu,
+  title     = {Optical Music Recognition for Handwritten Kateishiki-fu Scores using Symbol Detection and Melody Completion},
+  author    = {Kurita, Emika and Ikeda, Wataru and Yamada, Shuhei and Suzuki, Haruyoshi and Sugimoto, Maki and Isogawa, Mariko},
+  booktitle = {Asian Conference on Computer Vision (ACCV)},
+  year      = {2026}
+}</code></pre>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container is-max-desktop">
+      <div class="content has-text-centered">
+        <p>This page uses the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank" rel="noopener">Academic Project Page Template</a>, adapted from the <a href="https://nerfies.github.io" target="_blank" rel="noopener">Nerfies</a> project page.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
